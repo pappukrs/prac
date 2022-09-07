@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <style>
+    #parent {
+      width: 50%;
+      border: 2px solid black;
+      padding: 30px;
+      margin: 100px;
+      position: absolute;
+    }
+    #parent > :nth-child(1) {
+      background: red;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+    #parent > :nth-child(2) {
+      background: blue;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      /* position: relative;
+      top: 60px;
+      left: 140px; */
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+    }
+    /* only writing absolute will  work but and leave their space we have to write left right top bottom */
+    #parent > :nth-child(3) {
+      background: green;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div id="parent">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
